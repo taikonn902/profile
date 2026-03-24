@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phí Ngọc Tài - Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+</head>
+
+<body class="bg-[#1f242d] text-white dark:bg-white dark:text-black transition-colors duration-300">
+
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#1f242d] border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+
+            <!-- LOGO -->
+            <h1 class="text-xl font-bold text-white">
+                Dev<span class="text-cyan-400">Profile</span>
+            </h1>
+
+            <!-- NAV -->
+            <nav class="hidden md:flex items-center gap-2 text-sm font-semibold text-gray-300">
+
+                <a href="#home"
+                    class="nav-link px-4 py-2 rounded-lg bg-cyan-400 text-black shadow-md shadow-cyan-400/30">
+                    Home
+                </a>
+
+                <a href="#website"
+                    class="nav-link px-4 py-2 rounded-lg hover:bg-white/10 hover:text-white transition-all duration-300">
+                    Website
+                </a>
+
+                <a href="#UI-design"
+                    class="nav-link px-4 py-2 rounded-lg hover:bg-white/10 hover:text-white transition-all duration-300">
+                    UI Design
+                </a>
+
+                <a href="#AI"
+                    class="nav-link px-4 py-2 rounded-lg hover:bg-white/10 hover:text-white transition-all duration-300">
+                    AI
+                </a>
+
+                <a href="#contact"
+                    class="nav-link px-4 py-2 rounded-lg hover:bg-white/10 hover:text-white transition-all duration-300">
+                    Contact
+                </a>
+                <!-- LANGUAGE -->
+                <button id="langToggle" class="px-3 py-2 rounded-lg border border-white/10 hover:bg-white/10 text-sm">
+                    EN
+                </button>
+
+                <button id="themeToggle" class="px-3 py-2 rounded-lg border border-white/10 hover:bg-white/10">
+                    🌙
+                </button>
+
+            </nav>
+
+            <!-- MOBILE -->
+            <button id="menuBtn" class="md:hidden text-white text-2xl">
+                ☰
+            </button>
+
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 flex flex-col gap-3 bg-[#1f242d] text-gray-300">
+            <a href="#home" class="px-4 py-2 rounded-lg bg-cyan-400 text-black">Home</a>
+
+            <a href="#about" class="px-4 py-2 rounded-lg hover:bg-white/10 transition">About</a>
+
+            <a href="#services" class="px-4 py-2 rounded-lg hover:bg-white/10 transition">Services</a>
+
+            <a href="#portfolio" class="px-4 py-2 rounded-lg hover:bg-white/10 transition">Portfolio</a>
+
+            <a href="#contact" class="px-4 py-2 rounded-lg hover:bg-white/10 transition">Contact</a>
+        </div>
+    </header>
+
+    <section id="home" class="h-[calc(100vh-64px)] mt-16 flex items-center bg-[#1f242d] text-white px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center w-full">
+            <!-- LEFT CONTENT -->
+            <div>
+                <p class="text-lg text-gray-300">Hello, It's Me</p>
+
+                <h1 class="text-5xl md:text-6xl font-extrabold mt-2">
+                    Phi Ngoc Tai
+                </h1>
+
+                <h2 class="text-2xl md:text-3xl mt-3 font-semibold">
+                    And I'm a
+                    <span id="typing" class="text-cyan-400"></span>
+                </h2>
+
+                <p class="text-gray-400 mt-4 max-w-lg">
+                    I'm a Student at Can Tho University, majoring in Information Systems. I have a passion for creating
+                    beautiful and functional web interfaces and I'm always eager to learn new technologies and improve
+                    my skills.
+                </p>
+
+                <!-- SOCIAL -->
+                <div class="flex gap-4 mt-6">
+                    <a href="https://www.facebook.com/tainef.f" class="social-btn" title="Facebook"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://zalo.me/0988000697" class="social-btn" title="Zalo"><i
+                            class="fa-solid fa-z"></i></a>
+                    <a href="mailto:taikonn09@gmail.com" class="social-btn" title="Email"><i
+                            class="fa-regular fa-envelope"></i></a>
+                    <a href="https://github.com/taikonn902" class="social-btn" title="GitHub"><i
+                            class="fa-brands fa-github"></i></a>
+                </div>
+
+                <a href="#website"
+                    class="inline-block mt-8 px-8 py-3 rounded-full bg-cyan-400 text-black font-semibold shadow-lg shadow-cyan-400/30 hover:scale-105 transition">
+                    Read my Profile
+                </a>
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="flex justify-center relative">
+
+                <!-- glow -->
+                <div class="absolute w-80 h-80 bg-cyan-400 blur-3xl opacity-30 rounded-full"></div>
+
+                <!-- hexagon -->
+                <div class="hexagon relative">
+                    <img src="images/user.png" class="w-full h-full object-cover translate-y-4">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="website" class="scroll-mt-16">
+
+        <!-- TIMELINE 1 -->
+        <div class="h-screen flex items-center bg-[#1f242d] text-white px-6">
+            <div class="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-10 items-center">
+
+                <!-- LEFT CONTENT -->
+                <div class="relative">
+
+                    <!-- layer background -->
+                    <div class="absolute -top-6 -left-6 w-full h-full bg-cyan-400/10 rounded-xl blur-xl"></div>
+
+                    <!-- main content -->
+                    <div class="relative z-10">
+                        <h2 class="text-4xl font-bold">
+                            On Second year in my University
+                        </h2>
+
+                        <p class="mt-4 text-gray-400 max-w-md">
+                            I started learning Frontend development and began building my first website UI
+                        </p>
+
+                        <!-- CARD (layer effect) -->
+                        <div class="relative mt-8">
+                            <!-- behind layer -->
+                            <div class="absolute top-3 left-3 w-full h-full bg-white/5 rounded-xl"></div>
+
+                            <!-- main card -->
+                            <div
+                                class="relative bg-white/10 border border-white/10 rounded-xl p-6 backdrop-blur-md hover:scale-[1.02] transition">
+                                <h3 class="font-semibold text-lg text-cyan-400">Z9 MilkTea Store</h3>
+                                <p class="text-gray-400 text-sm mt-2">
+                                    My first project focusing on layout and responsive design using HTML & CSS.
+                                </p>
+                                <a href="https://github.com/taikonn902/z9MilkTea"
+                                    class="inline-block mt-3 text-sm text-cyan-400 hover:underline">
+                                    <span>View Project</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- BUTTON -->
+                        <button onclick="scrollToSection('timeline2')"
+                            class="mt-10 px-6 py-3 rounded-full bg-cyan-400 text-black font-semibold hover:scale-105 transition gap-2 inline-flex items-center">
+                            <span>Read More</span><i class="fa-solid fa-arrow-down"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- RIGHT IMAGES -->
+                <div class="relative flex justify-center items-center h-[500px]">
+
+                    <!-- HERO IMAGE (main) -->
+                    <img src="images/main-img-tl1.png" class="w-[550px] rounded-xl shadow-2xl border border-white/10 
+        absolute top-0 left-1/2 -translate-x-1/2
+        rotate-[-5deg] hover:rotate-0 hover:scale-105 
+        transition duration-500 z-20 cursor-pointer">
+
+                    <!-- SUB IMAGE -->
+                    <img src="images/sub-img-tl1.png" class="w-[350px] rounded-xl shadow-lg border border-white/10 
+        absolute bottom-10   right-10 
+        rotate-[6deg] opacity-90 
+        hover:rotate-0 hover:scale-110 
+        transition duration-500 z-10 cursor-pointer">
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TIMELINE 2 -->
+        <div id="timeline2" class="h-screen flex items-center bg-[#1f242d] text-white px-6">
+            <div class="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+
+                <!-- LEFT IMAGES -->
+                <div class="relative flex justify-center items-center h-[500px]">
+
+                    <!-- glow -->
+                    <div class="absolute w-[450px] h-[300px] bg-purple-500/20 blur-3xl rounded-full"></div>
+
+                    <!-- HERO IMAGE -->
+                    <img src="images/anna-clone-main.png" class="w-[500px] rounded-xl shadow-2xl border border-white/10 
+                absolute top-0 left-1/2 -translate-x-1/2
+                rotate-[4deg] hover:rotate-0 hover:scale-105 
+                transition duration-500 z-20 cursor-pointer">
+
+                    <!-- SUB IMAGE -->
+                    <img src="images/anna-clone-sub.png" class="w-[300px] rounded-xl shadow-lg border border-white/10 
+                absolute bottom-10 left-10 
+                rotate-[-6deg] opacity-90 
+                hover:rotate-0 hover:scale-110 
+                transition duration-500 z-10 cursor-pointer">
+                </div>
+
+                <!-- RIGHT CONTENT -->
+                <div class="relative">
+
+                    <!-- timeline line -->
+                    <div
+                        class="absolute -left-6 top-0 w-[2px] h-full bg-gradient-to-b from-cyan-400 to-purple-500 opacity-30">
+                    </div>
+
+                    <!-- content -->
+                    <div class="relative z-10">
+                        <h2 class="text-4xl font-bold">
+                            In my Third year
+                        </h2>
+
+                        <p class="mt-4 text-gray-400 max-w-md">
+                            I focused on building modern web interfaces with improved aesthetics and advanced
+                            interactions
+                        </p>
+
+                        <!-- GLASS CARD -->
+                        <div class="mt-8 relative">
+
+                            <!-- glow behind -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-cyan-400/10 to-purple-500/10 blur-xl rounded-xl">
+                            </div>
+
+                            <!-- main card -->
+                            <div
+                                class="relative bg-white/10 backdrop-blur-lg border border-white/10 rounded-xl p-6 hover:scale-[1.02] transition">
+                                <h3 class="font-semibold text-lg text-cyan-400">ANNA Glass Store Clone</h3>
+                                <p class="text-gray-400 text-sm mt-2">
+                                    Built interactive UI with JavaScript and connected to backend APIs.
+                                </p>
+                                <a href="#" class="inline-block mt-3 text-sm text-cyan-400 hover:underline">
+                                    View Project →
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- BUTTON -->
+                        <button onclick="scrollToSection('timeline3')"
+                            class="mt-10 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-400 to-purple-500 text-black font-semibold hover:scale-105 transition">
+                            Continue ↓
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TIMELINE 3 - GALLERY -->
+        <div id="timeline3" class="min-h-screen flex items-center bg-[#1f242d] text-white px-6 py-20">
+            <div class="max-w-6xl mx-auto w-full text-center">
+
+                <!-- TITLE -->
+                <h2 class="text-4xl font-bold">
+                    UI Gallery
+                </h2>
+
+                <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+                    A collection of UI websites I have created
+                </p>
+
+                <!-- GALLERY GRID -->
+                <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- ITEM 1-->
+                    <div class="group relative rounded-xl overflow-hidden border border-white/10 p-4 bg-white/5">
+
+                        <div class="relative">
+
+                            <!-- DESKTOP IMAGE -->
+                            <img src="images/rattatea-main.png" class="w-full h-[200px] object-cover rounded-lg
+            group-hover:scale-105 transition duration-500">
+
+                            <!-- MOBILE IMAGE -->
+                            <img src="images/rattatea-sub.jpg" class="w-[90px] absolute -bottom-6 -right-2
+            rounded-lg border border-white/10 shadow-lg
+            rotate-[6deg]
+            group-hover:scale-110 group-hover:rotate-0
+            transition duration-500 z-10">
+
+                        </div>
+
+                        <!-- INFO -->
+                        <div class="mt-6 text-left">
+                            <h3 class="text-sm font-semibold text-cyan-400">Handmade Shop</h3>
+                            <p class="text-xs text-gray-400 mt-1">Responsive UI Design</p>
+                        </div>
+
+                        <!-- OVERLAY -->
+                        <div
+                            class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <a href="https://ratta-tea-studio.wuaze.com/?utm_source=zalo&utm_medium=zalo&utm_campaign=zalo&i=2"
+                                class="px-4 py-2 bg-cyan-400 text-black rounded-full text-sm font-semibold">
+                                View
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- ITEM 2 -->
+                    <div class="group relative rounded-xl overflow-hidden border border-white/10 p-4 bg-white/5">
+
+                        <img src="images/cloth-shop.png"
+                            class="w-full h-[220px] object-cover group-hover:scale-110 transition duration-500">
+
+                        <!-- INFO -->
+                        <div class="mt-6 text-left">
+                            <h3 class="text-sm font-semibold text-cyan-400">Clothing Shop</h3>
+                            <p class="text-xs text-gray-400 mt-1">Mordem UI Design</p>
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <button class="px-4 py-2 bg-cyan-400 text-black rounded-full font-semibold">
+                                View
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 3 -->
+                    <div class="group relative rounded-xl overflow-hidden border border-white/10 p-4 bg-white/5">
+
+                        <div class="relative">
+
+                            <!-- DESKTOP IMAGE -->
+                            <img src="images/Hflower.png" class="w-full h-[200px] object-cover rounded-lg
+            group-hover:scale-105 transition duration-500">
+
+                            <!-- MOBILE IMAGE -->
+                            <img src="images/z7652874865337_962cf814281b35b1466dc8432387d93a.jpg" class="w-[90px] absolute -bottom-6 -right-2
+            rounded-lg border border-white/10 shadow-lg
+            rotate-[6deg]
+            group-hover:scale-110 group-hover:rotate-0
+            transition duration-500 z-10">
+
+                        </div>
+
+                        <!-- INFO -->
+                        <div class="mt-6 text-left">
+                            <h3 class="text-sm font-semibold text-cyan-400">Flower Shop</h3>
+                            <p class="text-xs text-gray-400 mt-1">Responsive UI Design</p>
+                        </div>
+
+                        <!-- OVERLAY -->
+                        <div
+                            class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <a href="https://flowers-shop-pink.vercel.app/"
+                                class="px-4 py-2 bg-cyan-400 text-black rounded-full text-sm font-semibold">
+                                View
+                            </a>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <a href="#UI-design"
+                    class="inline-block mt-14 px-6 py-3 rounded-full border border-white/20 hover:bg-white/10 transition">
+                    Next: UI Design Skills →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="UI-design" class="min-h-screen bg-[#1f242d] text-white px-6 py-20">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+            <!-- LEFT CONTENT -->
+            <div>
+                <h2 class="text-4xl font-bold">
+                    UI Design Skills
+                </h2>
+
+                <p class="mt-4 text-gray-400 max-w-md">
+                    I use Figma to design modern and user-friendly interfaces, focusing on layout, spacing, and visual
+                    hierarchy.
+                </p>
+
+                <p class="mt-4 text-gray-400 max-w-md">
+                    This project was developed in collaboration with my team
+                </p>
+
+                <!-- SKILLS -->
+                <div class="mt-6 flex flex-wrap gap-3">
+                    <span class="px-4 py-2 bg-white/10 rounded-full text-sm">Figma</span>
+                    <span class="px-4 py-2 bg-white/10 rounded-full text-sm">Auto Layout</span>
+                    <span class="px-4 py-2 bg-white/10 rounded-full text-sm">Prototype</span>
+                    <span class="px-4 py-2 bg-white/10 rounded-full text-sm">UI/UX</span>
+                </div>
+
+                <!-- CTA -->
+                <a href="https://www.figma.com/design/j3M4p0p7Ir6GmGf5mAsZ4k/PDT-System?node-id=0-1&p=f&t=enztuzPeknZelzJK-0"
+                    class="inline-block mt-8 px-6 py-3 rounded-full bg-cyan-400 text-black font-semibold hover:scale-105 transition">
+                    View Figma Projects
+                </a>
+            </div>
+
+            <!-- RIGHT IMAGES -->
+            <div class="relative flex justify-center items-center h-[500px]">
+
+                <!-- MAIN DESIGN -->
+                <img src="images/figma1.png" class="w-[420px] rounded-xl shadow-2xl border border-white/10 
+                rotate-[-4deg] hover:rotate-0 hover:scale-105 transition duration-500 z-20">
+
+                <!-- SUB DESIGN -->
+                <img src="images/figma2.png" class="w-[260px] absolute bottom-0 right-0 
+                rounded-xl shadow-lg border border-white/10 
+                rotate-[6deg] opacity-90
+                hover:rotate-0 hover:scale-105 transition duration-500 z-10">
+
+                <!-- EXTRA DESIGN -->
+                <img src="images/figma3.png" class="w-[220px] absolute top-0 left-0 
+                rounded-xl shadow-lg border border-white/10 
+                rotate-[-6deg] opacity-80
+                hover:rotate-0 hover:scale-105 transition duration-500 z-0">
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="min-h-screen bg-[#1f242d] text-white px-6 py-20 " id="AI">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+            <!-- LEFT CONTENT -->
+            <div>
+                <h2 class="text-4xl font-bold">
+                    AI Fruit Detection
+                </h2>
+
+                <p class="mt-4 text-gray-400">
+                    This project focuses on building an intelligent fruit detection system using the YOLOv8 algorithm.
+                    The model is trained to recognize multiple types of fruits in real-time with high accuracy.
+                </p>
+
+                <!-- YOLO DESCRIPTION -->
+                <div class="mt-6 space-y-4 text-gray-400 text-sm leading-relaxed">
+
+                    <p>
+                        YOLOv8 (You Only Look Once) is a state-of-the-art object detection algorithm that processes
+                        images
+                        in a single forward pass, enabling fast and efficient detection.
+                    </p>
+
+                    <p>
+                        The model uses deep convolutional neural networks to extract features and predict bounding
+                        boxes,
+                        class labels, and confidence scores simultaneously.
+                    </p>
+
+                    <p>
+                        In this project, I trained the model on a custom dataset of fruits, optimized performance, and
+                        achieved real-time detection suitable for practical applications.
+                    </p>
+
+                </div>
+
+                <div class="mt-6 flex flex-wrap gap-3">
+                    <span class="px-3 py-1 bg-white/10 rounded text-sm">YOLOv8</span>
+                    <span class="px-3 py-1 bg-white/10 rounded text-sm">Computer Vision</span>
+                    <span class="px-3 py-1 bg-white/10 rounded text-sm">Deep Learning</span>
+                    <span class="px-3 py-1 bg-white/10 rounded text-sm">Python</span>
+                </div>
+
+                <a href="https://www.kaggle.com/code/phingoctai/train-ok/edit"
+                    class="inline-block mt-8 px-6 py-3 rounded-full bg-cyan-400 text-black font-semibold hover:scale-105 transition">
+                    View Project
+                </a>
+            </div>
+
+            <div class="relative flex justify-center items-center h-[450px]">
+                <div class="absolute w-[400px] h-[300px] bg-cyan-400/20 blur-3xl rounded-full"></div>
+
+                <img src="images/taoanhdep_net_anh_7270.jpeg" class="w-[520px] rounded-xl border border-white/10 shadow-2xl 
+                hover:scale-105 transition duration-500 z-20">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="h-[calc(100vh-64px)] bg-[#1f242d] text-white px-6 flex items-center justify-center">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-bold">Contact Me</h2>
+            <p class="mt-4 text-gray-400 max-w-xl mx-auto">
+                Feel free to reach out through any of the platforms below.
+            </p>
+
+            <!-- CONTACT LINKS -->
+            <div class="mt-10 flex flex-wrap justify-center gap-6 text-sm font-semibold">
+                <a href="mailto:taikonn09@gmail.com"
+                    class="px-6 py-3 rounded-full bg-cyan-400 text-black shadow-lg shadow-cyan-400/30 hover:scale-105 transition">
+                    Email Me
+                </a>
+
+                <a href="tel:0988000697"
+                    class="px-6 py-3 rounded-full bg-cyan-400 text-black shadow-lg shadow-cyan-400/30 hover:scale-105 transition">
+                    Call / Zalo
+                </a>
+
+                <a href="https://www.facebook.com/tainef.f" target="_blank"
+                    class="px-6 py-3 rounded-full bg-cyan-400 text-black shadow-lg shadow-cyan-400/30 hover:scale-105 transition">
+                    Facebook
+                </a>
+
+                <a href="https://github.com/taikonn902" target="_blank"
+                    class="px-6 py-3 rounded-full bg-cyan-400 text-black shadow-lg shadow-cyan-400/30 hover:scale-105 transition">
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+  const themeToggle = document.getElementById("themeToggle");
+  const body = document.body;
+
+  // Khi load trang, kiểm tra trạng thái đã lưu
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark");
+    themeToggle.textContent = "☀️";
+  }
+
+  themeToggle.addEventListener("click", () => {
+    body.classList.toggle("dark");
+
+    if (body.classList.contains("dark")) {
+      themeToggle.textContent = "☀️"; // icon cho light mode
+      localStorage.setItem("theme", "dark");
+    } else {
+      themeToggle.textContent = "🌙"; // icon cho dark mode
+      localStorage.setItem("theme", "light");
+    }
+  });
+</script>
+
+</body>
+<script src="js/app.js"></script>
+
+
+</html>

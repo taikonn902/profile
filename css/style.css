@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #22d3ee;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #22d3ee;
+    transition: 0.3s;
+}
+
+.social-btn:hover {
+    background: #22d3ee;
+    color: black;
+    box-shadow: 0 0 15px #22d3ee;
+}
+
+.hexagon {
+    width: 300px;
+    height: 350px;
+    clip-path: polygon(25% 5%,
+            75% 5%,
+            100% 50%,
+            75% 95%,
+            25% 95%,
+            0% 50%);
+    /* bỏ overflow: hidden */
+}
+
