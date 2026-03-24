@@ -6,28 +6,28 @@ let current = "";
 let isDeleting = false;
 
 function type() {
-    const el = document.getElementById("typing");
+  const el = document.getElementById("typing");
 
-    if (!isDeleting && j <= roles[i].length) {
-        current = roles[i].substring(0, j++);
-    } else if (isDeleting && j >= 0) {
-        current = roles[i].substring(0, j--);
-    }
+  if (!isDeleting && j <= roles[i].length) {
+    current = roles[i].substring(0, j++);
+  } else if (isDeleting && j >= 0) {
+    current = roles[i].substring(0, j--);
+  }
 
-    el.innerHTML = current;
+  el.innerHTML = current;
 
-    if (j === roles[i].length) {
-        isDeleting = true;
-        setTimeout(type, 3000); 
-        return;
-    }
+  if (j === roles[i].length) {
+    isDeleting = true;
+    setTimeout(type, 3000);
+    return;
+  }
 
-    if (j === 0) {
-        isDeleting = false;
-        i = (i + 1) % roles.length;
-    }
+  if (j === 0) {
+    isDeleting = false;
+    i = (i + 1) % roles.length;
+  }
 
-    setTimeout(type, isDeleting ? 40 : 80);
+  setTimeout(type, isDeleting ? 40 : 80);
 }
 
 type();
@@ -60,6 +60,22 @@ function scrollToSection(id) {
   });
 }
 
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTop.classList.remove("hidden");
+  } else {
+    backToTop.classList.add("hidden");
+  }
+});
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
 
 
 
