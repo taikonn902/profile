@@ -25,8 +25,8 @@
 }
 
 .hexagon {
-    width: 300px;
-    height: 350px;
+    width: 250px;
+    height: 290px;
     clip-path: polygon(25% 5%,
             75% 5%,
             100% 50%,
@@ -34,5 +34,12 @@
             25% 95%,
             0% 50%);
     /* bỏ overflow: hidden */
+}
+
+@media (min-width: 768px) {
+    .hexagon {
+        width: 300px;
+        height: 350px;
+    }
 }
 
