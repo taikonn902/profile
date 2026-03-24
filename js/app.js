@@ -77,6 +77,50 @@ backToTop.addEventListener("click", () => {
   });
 });
 
+// Mobile menu toggle
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const closeMenuBtn = document.getElementById('closeMenuBtn');
+const mobileNavLinks = mobileMenu.querySelectorAll('.nav-link');
+
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.add('open');
+  document.body.classList.add('no-scroll');
+});
+
+closeMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.remove('open');
+  document.body.classList.remove('no-scroll');
+});
+
+// Close menu when clicking on nav links
+mobileNavLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    document.body.classList.remove('no-scroll');
+  });
+});
+
+// Hide/show header on scroll
+const header = document.getElementById('header');
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY;
+  const scrollThreshold = 10; // Minimum scroll distance to trigger
+
+  if (Math.abs(currentScrollY - lastScrollY) > scrollThreshold) {
+    if (currentScrollY > lastScrollY) {
+      // Scrolling down - hide header
+      header.classList.add('translate-y-[-100%]');
+    } else {
+      // Scrolling up - show header
+      header.classList.remove('translate-y-[-100%]');
+    }
+    lastScrollY = currentScrollY;
+  }
+});
+
 
 
 

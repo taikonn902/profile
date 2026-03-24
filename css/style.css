@@ -43,3 +43,19 @@
     }
 }
 
+/* Mobile Menu Animation */
+#mobileMenu {
+    transition: all 0.3s ease-in-out;
+}
+
+#mobileMenu.open {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+/* Disable scroll when mobile menu is open */
+.no-scroll {
+    overflow: hidden;
+}
+
